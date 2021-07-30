@@ -1,5 +1,6 @@
+@import url("https://use.typekit.net/ueh4gmu.css");
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Proxima Nova", Sans-Serif;
 }
 
 header nav .logo {
@@ -73,6 +74,7 @@ header nav .blueButton {
 
 .exploreNow .background {
   background-image: url(../img/background.jpg);
+  border-radius: 10px;
   height: 500px;
 }
 
@@ -85,9 +87,26 @@ header nav .blueButton {
   text-align: center;
 }
 
+.exploreNow .background .background__heading h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 50px;
+  font-size: 5vw;
+}
+
+@media (max-width: 700px) {
+  .exploreNow .background .background__heading h1 {
+    font-size: 35px;
+  }
+}
+
+@media (min-width: 3000px) {
+  .exploreNow .background .background__heading h1 {
+    font-size: 150px;
+  }
+}
+
 .exploreNow .background .inputs {
   background-color: rgba(255, 255, 255, 0.575);
-  z-index: 1;
 }
 
 .exploreNow .background .inputs .checkIn, .exploreNow .background .inputs .checkOut {
@@ -101,6 +120,19 @@ header nav .blueButton {
 @media (min-width: 768px) {
   .exploreNow .background .inputs .whereToGo, .exploreNow .background .inputs .checkIn, .exploreNow .background .inputs .checkOut {
     margin: 0 15px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .exploreNow .background .inputs {
+    width: 90%;
+  }
+  .exploreNow .background .inputs .whereToGo, .exploreNow .background .inputs .checkIn, .exploreNow .background .inputs .checkOut {
+    padding: 10px 0;
+  }
+  .exploreNow .background .inputs .checkIn, .exploreNow .background .inputs .checkOut {
+    border-left: 0px;
+    border-top: 1px solid #B4C6EE;
   }
 }
 /*# sourceMappingURL=style.css.map */
