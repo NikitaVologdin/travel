@@ -1,0 +1,125 @@
+@import '../node_modules/bootstrap/scss/functions';
+@import '../node_modules/bootstrap/scss/variables';
+@import '../node_modules/bootstrap/scss/mixins';
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  }
+
+header {
+    nav {
+        .logo{
+            position: relative;
+            padding-left: 40px;
+
+            &:before{
+                content: '';
+                background-image: url(../img/globe.png);
+                height: 27px;
+                width: 27px;
+                display: block;
+                position: absolute;
+                top: 5px;
+                left: 0px;
+            }
+        }
+        .connectButton {
+            border-radius: 30px;
+            background-color: #4468E2;
+            padding: 4px 12px;
+            
+
+            a {
+                color: white;
+                padding: 8px 16px ;
+            }
+        } 
+        .connectButtonInBurgerMenu {
+            display: none;
+
+            a {
+                color:#4468E2;
+            }
+        }
+
+        .navLinkStyle {
+            color: #1C4961 !important;
+            opacity: 0.75;
+
+            &:hover{
+                opacity: 1;
+            }
+        }
+
+        .navActiveLinkStyle {
+            color: #1C4961 !important;
+        }
+
+        .blueButton {
+            color: white !important;
+            padding: 4px 8px;
+            background-color: #4468E2;
+            width: 104px;
+            height: 30px;
+            border-radius: 40px;
+            text-align: center;
+            line-height: 22px;
+            margin-left: -22px;
+        }
+
+        @include media-breakpoint-down(lg) {
+            .connectButtonDisableOnMdScreen {
+                display: none;
+            }
+
+            .connectButtonInBurgerMenu {
+                display: inline;
+            }
+        }
+    }
+}
+
+.exploreNow {
+
+    .background {
+        background-image: url(../img/background.jpg);
+        // filter: brightness(90%);
+        height: 500px;
+
+        .background__heading {
+            height: 100%;
+
+            h1, p {
+               color: white;
+               text-align: center;
+            }
+        }
+
+        .inputs {
+            background-color: rgba(255, 255, 255, 0.575);
+            z-index: 1;
+            // width: 60%;
+
+            .checkIn, .checkOut{
+                border-left: 1px solid #B4C6EE;
+            }
+
+            .whereToGo, .checkIn, .checkOut{
+                cursor: pointer;
+            }
+            
+            @include media-breakpoint-up(md){
+                .whereToGo, .checkIn, .checkOut {
+                    margin: 0 15px;
+                }
+            }
+        }
+
+        
+    }
+
+    // .travelToexploreHeadingAndParagraph{
+    //     width: 100%;
+    //     position: absolute;
+    // }
+}
