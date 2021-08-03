@@ -10,7 +10,7 @@ header nav .logo {
 
 header nav .logo:before {
   content: '';
-  background-image: url(../img/globe.png);
+  background-image: url(../img/globe.svg);
   height: 27px;
   width: 27px;
   display: block;
@@ -74,8 +74,16 @@ header nav .blueButton {
 
 .exploreNow .background {
   background-image: url(../img/background.jpg);
-  border-radius: 10px;
   height: 500px;
+  background-size: cover;
+  border-radius: 10px;
+}
+
+@media (max-width: 767.98px) {
+  .exploreNow .background {
+    background-image: none;
+    height: auto;
+  }
 }
 
 .exploreNow .background .background__heading {
@@ -89,19 +97,18 @@ header nav .blueButton {
 
 .exploreNow .background .background__heading h1 {
   font-family: "Montserrat", sans-serif;
-  font-size: 50px;
-  font-size: 5vw;
 }
 
-@media (max-width: 700px) {
-  .exploreNow .background .background__heading h1 {
-    font-size: 35px;
+.exploreNow .background .background__heading p {
+  width: 60%;
+}
+
+@media (max-width: 767.98px) {
+  .exploreNow .background .background__heading h1, .exploreNow .background .background__heading p {
+    color: black;
   }
-}
-
-@media (min-width: 3000px) {
-  .exploreNow .background .background__heading h1 {
-    font-size: 150px;
+  .exploreNow .background .background__heading {
+    margin-top: 70px;
   }
 }
 
@@ -134,5 +141,59 @@ header nav .blueButton {
     border-left: 0px;
     border-top: 1px solid #B4C6EE;
   }
+}
+
+.featuresList .featuresList_margin {
+  margin-top: 90px;
+}
+
+.featuresList .featuresList__item {
+  padding: 25px;
+  height: 100%;
+  -webkit-box-shadow: 7px 12px 15px 5px rgba(135, 135, 135, 0.1);
+  box-shadow: 7px 12px 15px 5px rgba(135, 135, 135, 0.1);
+}
+
+.heading {
+  margin-top: 180px;
+  font-weight: 900;
+}
+
+.travel-types-list {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 90px;
+}
+
+.travel-types-list li {
+  line-height: 40px;
+}
+
+.travel-types-list li:hover {
+  border-bottom: 2.5px solid #163235;
+}
+
+.travel-types-list .travel-types-list_active {
+  border-bottom: 2.5px solid #163235;
+}
+
+.destinations-stock .destinations-items_item {
+  padding-top: 3rem;
+}
+
+.destinations-stock .destinations-items_item img {
+  border-radius: 3%;
+}
+
+.destinations-stock .features img {
+  height: 25px;
+}
+
+.destinations-stock .price {
+  font-size: 1.7rem;
+}
+
+.destinations-stock h5 {
+  margin-top: 10px;
 }
 /*# sourceMappingURL=style.css.map */

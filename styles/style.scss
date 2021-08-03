@@ -17,7 +17,7 @@ header {
 
             &:before{
                 content: '';
-                background-image: url(../img/globe.png);
+                background-image: url(../img/globe.svg);
                 height: 27px;
                 width: 27px;
                 display: block;
@@ -86,9 +86,17 @@ header {
 
     .background {
         background-image: url(../img/background.jpg);
+        height: 500px;
+        background-size: cover;
         // filter: brightness(90%);
         border-radius: 10px;
-        height: 500px;
+
+        @include media-breakpoint-down(md){
+            & {
+                background-image: none;
+                height: auto;
+            }
+        }
 
         .background__heading {
             height: 100%;
@@ -100,7 +108,20 @@ header {
 
             h1 {
                 font-family: "Montserrat", sans-serif;
-                @include responsive-font(5vw, 35px, 150px, 50px)
+            }
+
+            p {
+                width: 60%;
+            }
+
+            @include media-breakpoint-down(md){
+                h1, p {
+                    color: black;
+                }
+
+                & {
+                    margin-top: 70px;
+                }
             }
         }
 
@@ -138,15 +159,73 @@ header {
                 }
 
             }
-
-
         }
+    }
+}
 
-        
+.featuresList {
+
+
+    // flex-wrap: wrap;
+
+    .featuresList_margin {
+        margin-top: 90px;
     }
 
-    // .travelToexploreHeadingAndParagraph{
-    //     width: 100%;
-    //     position: absolute;
-    // }
+    .featuresList__item{
+        padding: 25px;
+        // border: 1px solid green;
+        height: 100%;
+        -webkit-box-shadow: 7px 12px 15px 5px rgba(135,135,135,0.1); 
+        box-shadow: 7px 12px 15px 5px rgba(135,135,135,0.1);
+    }
+}
+
+
+.heading {
+    margin-top: 180px;
+    font-weight: 900;
+}
+
+.travel-types-list{
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 90px;
+
+    li {
+        line-height: 40px;
+
+        &:hover {
+            border-bottom: 2.5px solid #163235;
+        }
+    }
+
+    .travel-types-list_active {
+        border-bottom: 2.5px solid #163235;
+    }
+}
+
+.destinations-stock {
+
+    .destinations-items_item{
+        padding-top: 3rem;
+
+        img {
+            border-radius: 3%;
+        }
+    }
+
+    .features {
+        img {
+            height: 25px;
+        }
+    }
+
+    .price {
+        font-size: 1.7rem;
+    }
+
+    h5 {
+        margin-top: 10px;
+    }
 }
